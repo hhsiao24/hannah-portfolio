@@ -9,7 +9,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: 'hannah-portfolio',
+    basename: '/hannah-portfolio',
   }
 );
 
