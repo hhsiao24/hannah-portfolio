@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Stack, Text, Title } from '@mantine/core';
+import {Button, Stack, Text, Title} from '@mantine/core';
 
 export const Typewriter = ({ text, speed }: { text: string; speed: number }) => {
   const [displayText, setDisplayText] = useState('');
@@ -21,19 +21,23 @@ export const Typewriter = ({ text, speed }: { text: string; speed: number }) => 
 };
 
 export const AboutMe = () => {
+  const handleOpenPdf = () => {
+    window.open('https://drive.google.com/file/d/1TnBkC0oWH6YGawiXq1XaJOkpkG3GSLjD/view?usp=sharing', '_blank');
+  };
   return (
     <Stack id="about-me" align="center" style={{zIndex:4, position:'relative'}}>
       <Stack h={900} pt={200} align="center" w="95%" maw={800}>
         <Title order={1}>
           <Typewriter text="Hello, I'm Hannah! Welcome to My Portfolio!" speed={100} />
         </Title>
-        <Text size="md" ta="center">
+        <Text size="md" ta="center" pb={10}>
           I’m a second-year CS major at Georgia Tech 🐝 with a passion for using technology to make a difference 🌍.
           I love exploring projects that combine creativity ✨ and problem solving to create real world impact 💥.
 
           Whether it’s through coding 💻, design 🎨, or just brainstorming new ideas 💡,
           I’m all about building things that help people and make life better.
         </Text>
+        <Button onClick={handleOpenPdf}>Resume</Button>
       </Stack>
     </Stack>
   );

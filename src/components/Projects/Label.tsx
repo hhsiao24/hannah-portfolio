@@ -32,6 +32,8 @@ export const Label = ({
 
   return (
     <Box
+        // p={0}
+        // w={375}
       style={{
         display: 'flex',
         position: 'absolute',
@@ -116,7 +118,7 @@ export const Label = ({
               {title}
             </Text>
 
-            <List size="sm" style={{ marginTop: '0.5rem', color: 'white' }}>
+            <List size="sm" style={{ marginRight: '0.7rem', marginTop: '0.5rem', color: 'white' }}>
               {descriptionItems.map((item, index) => (
                 <List.Item key={index}>{item}</List.Item>
               ))}
@@ -154,13 +156,13 @@ export const Label = ({
 
             <Grid p={2} mt={10}>
               <Grid.Col span={6}>
-                <Button variant="outline" component="a" href={button1Link} fullWidth>
+                <Button variant="outline" component="a" href={button1Link} target="_blank" fullWidth>
                   {button1Text}
                 </Button>
               </Grid.Col>
               {buttons === 2 && (
                 <Grid.Col span={6}>
-                  <Button variant="outline" component="a" href={button2Link} fullWidth>
+                  <Button variant="outline" component="a" href={button2Link} target="_blank" fullWidth>
                     {button2Text}
                   </Button>
                 </Grid.Col>

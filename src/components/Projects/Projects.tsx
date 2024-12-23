@@ -16,7 +16,6 @@ export const Projects = () => {
         Projects
       </Title>
       <Text ta="center" pb={80}>
-        {' '}
         hover for more information!
       </Text>
       <Stack justify="center" align="center" pb={100}>
@@ -27,11 +26,11 @@ export const Projects = () => {
             title="Breadboard Bakery 🍞"
             descriptionItems={[
               'A web application that enables users to upload images of their wired breadboards, generating' +
-                'corresponding logic circuit schematics using advanced image processing techniques',
+                ' corresponding logic circuit schematics using advanced image processing techniques',
               'Used image processing techniques to detect and isolate breadboards from backgrounds, utilizing' +
-                'grayscale conversion, edge detection, and contour detection to identify wires and chips for schematic generation',
+                ' grayscale conversion, edge detection, and contour detection to identify wires and chips for schematic generation',
               'Deployed a Flask API to facilitate communication between the frontend and backend, manage image uploads and' +
-                'displaying generate circuit schematic images',
+                ' displaying generate circuit schematic images',
             ]}
             skills={['React', 'Flask', 'OpenCV', 'Python', 'HTML', 'CSS', 'Javascript']}
             img={breadboard}
@@ -51,7 +50,7 @@ export const Projects = () => {
               '2nd place in Sports Track, 3rd place in Health Track',
               'Web application delivering personalized exercise form feedback',
               'Employed MediaPipe and OpenCV to analyze user’s exercise videos, creating a downloadable video visualizer' +
-              'that compares user’s exercise form to the “perfect” form',
+              ' that compares user’s exercise form to the “perfect” form',
               'Engineered an algorithm to interpret visualizer data, providing actionable feedback for user’s improvement',
             ]}
             skills={['MediaPipe', 'OpenCV', 'React', 'Python', 'HTML', 'CSS', 'Javascript']}
