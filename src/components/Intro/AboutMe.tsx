@@ -22,7 +22,7 @@ export const Typewriter = ({ text, speed }: { text: string; speed: number }) => 
 
 export const AboutMe = () => {
   return (
-    <Stack align="center" style={{zIndex:4, position:'relative'}}>
+    <Stack id="about-me" align="center" style={{zIndex:4, position:'relative'}}>
       <Stack h={900} pt={200} align="center" w="95%" maw={800}>
         <Title order={1}>
           <Typewriter text="Hello, I'm Hannah! Welcome to My Portfolio!" speed={100} />
