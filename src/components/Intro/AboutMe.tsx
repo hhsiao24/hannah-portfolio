@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Title } from '@mantine/core';
+import { useEffect, useState } from 'react';
+import { Stack, Text, Title } from '@mantine/core';
 
 export const Typewriter = ({ text, speed }: { text: string; speed: number }) => {
   const [displayText, setDisplayText] = useState('');
@@ -22,10 +22,19 @@ export const Typewriter = ({ text, speed }: { text: string; speed: number }) => 
 
 export const AboutMe = () => {
   return (
-    <Container w="100%" h={900} p={0} m={0}>
-      <Title order={1}>
-        <Typewriter text="Hello, I'm Hannah! Welcome to My Portfolio!" speed={100} />
-      </Title>
-    </Container>
+    <Stack align="center">
+      <Stack h={900} pt={200} align="center" w="95%" maw={800}>
+        <Title order={1}>
+          <Typewriter text="Hello, I'm Hannah! Welcome to My Portfolio!" speed={100} />
+        </Title>
+        <Text size="md" ta="center">
+          Hi, I’m a second-year CS major at Georgia Tech 🎓 with a passion for using technology to make a difference 🌍.
+          I love exploring projects that combine creativity ✨ and problem solving to create real world impact 💥.
+
+          Whether it’s through coding 💻, design 🎨, or just brainstorming new ideas 💡,
+          I’m all about building things that help people and make life better.
+        </Text>
+      </Stack>
+    </Stack>
   );
 };

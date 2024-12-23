@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Box, Container } from '@mantine/core';
-import { useScroll } from '@/hooks/useScroll';
 import { useWindowSize } from '@/hooks/useWindowSize';
 
 class Star {
@@ -12,7 +11,6 @@ class Star {
 export const StarBackground = () => {
   const [stars, setStars] = useState<Star[]>([]); // Allow an array of Star objects
   const [width] = useWindowSize();
-  const scrollPosition = useScroll();
 
   useEffect(() => {
     setStars(
@@ -23,7 +21,20 @@ export const StarBackground = () => {
   }, []);
 
   return (
-    <Container w="100%" h={900} p={0} m={0} style={{position:"absolute", zIndex: -2, top: 0}}>
+    <Container
+      w="100%"
+      h={900}
+      p={0}
+      m={0}
+      style={{
+        position: 'fixed',
+        width,
+        maxWidth: width,
+        zIndex: -2,
+        top: 0,
+        background: 'linear-gradient(0deg, rgba(19,75,112,1) 0%, rgba(32,30,67,1) 100%)',
+      }}
+    >
       {stars.map((star, index) => (
         <Box
           bg="white"
@@ -31,8 +42,9 @@ export const StarBackground = () => {
             position: 'fixed',
             left: star.x * width,
             top: star.y * 900, //+ scrollPosition * (1 - star.r)
-            width: star.r,
-            height: star.r,
+            width: star.r * 2,
+            height: star.r * 2,
+            borderRadius: 999,
           }}
           key={index}
         />
