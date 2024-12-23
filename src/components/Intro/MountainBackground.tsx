@@ -1,9 +1,9 @@
-import mountain1 from '/public/assets/mountain1.png';
-import mountain2 from '/public/assets/mountain2.png';
-import mountain3 from '/public/assets/mountain3.png';
-import mountain4 from '/public/assets/mountain4.png';
-import mountain5 from '/public/assets/mountain5.png';
-import mountain6 from '/public/assets/mountain6.png';
+import mountain1 from '/src/assets/mountain1.png';
+import mountain2 from '/src/assets/mountain2.png';
+import mountain3 from '/src/assets/mountain3.png';
+import mountain4 from '/src/assets/mountain4.png';
+import mountain5 from '/src/assets/mountain5.png';
+import mountain6 from '/src/assets/mountain6.png';
 import { Container, Image } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { useScroll } from '@/hooks/useScroll';

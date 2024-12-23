@@ -28,7 +28,7 @@ export const AboutMe = () => {
           <Typewriter text="Hello, I'm Hannah! Welcome to My Portfolio!" speed={100} />
         </Title>
         <Text size="md" ta="center">
-          Hi, I’m a second-year CS major at Georgia Tech 🎓 with a passion for using technology to make a difference 🌍.
+          I’m a second-year CS major at Georgia Tech 🐝 with a passion for using technology to make a difference 🌍.
           I love exploring projects that combine creativity ✨ and problem solving to create real world impact 💥.
 
           Whether it’s through coding 💻, design 🎨, or just brainstorming new ideas 💡,

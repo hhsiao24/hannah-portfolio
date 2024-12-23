@@ -3,6 +3,7 @@ import { AboutMe } from '@/components/Intro/AboutMe';
 import { MountainBackground } from '@/components/Intro/MountainBackground';
 import { Robot } from '@/components/Intro/Robot';
 import { StarBackground } from '@/components/Intro/StarBackground';
+import { Projects } from '@/components/Projects/Projects';
 
 export function HomePage() {
   return (
@@ -11,7 +12,7 @@ export function HomePage() {
       <StarBackground />
       <MountainBackground />
       <Robot />
-      <Space h={1000} w="100%" />
+      <Projects />
     </Container>
   );
 }
