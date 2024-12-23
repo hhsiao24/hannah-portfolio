@@ -1,3 +1,4 @@
+import robot from '/public/assets/robot.png';
 import { Container, Image, Stack } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { useScroll } from '@/hooks/useScroll';
@@ -14,7 +15,7 @@ export const Robot = () => {
       style={{ position: 'absolute', width, maxWidth: width, top: 0, zIndex: 3 }}
     >
       <Stack h={900} pt={640} align="center">
-        <Image src="public/assets/robot.png" w="10%" style={{ bottom: -(1 / 12) * scrollPosition }} />
+        <Image src={robot} w="10%" style={{ bottom: -(1 / 12) * scrollPosition }} />
       </Stack>
     </Container>
   );
