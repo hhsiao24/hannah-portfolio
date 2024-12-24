@@ -1,4 +1,4 @@
-import formFit from '/public/formfit.png';
+import formFit from '/src/assets/formfit.png';
 import breadboard from '/src/assets/breadboardBakery.jpg';
 import outline from '/src/assets/robotOutline.png';
 import { Container, Image, Stack, Text, Title } from '@mantine/core';
@@ -6,14 +6,14 @@ import { useDims } from '@/hooks/useDims';
 import { Label } from './Label';
 
 export const Projects = () => {
-  const { ref, height, width } = useDims();
+  const { ref, height, width } = useDims<HTMLImageElement>();
 
   return (
     <Container
       id="projects"
       fluid
       m={0}
-      style={{ position: 'relative', backgroundColor: '#002d44' }}
+      style={{ position: 'relative', background: 'linear-gradient(0deg, #005d8c 0%, #004c73 100%)' }}
     >
       <Title w="100%" ta="center" pb={10} pt={100}>
         Projects
