@@ -5,6 +5,7 @@ import { Robot } from '@/components/Intro/Robot';
 import { StarBackground } from '@/components/Intro/StarBackground';
 import { Projects } from '@/components/Projects/Projects';
 import { Skills } from '@/components/Skills/Skills';
+import {Experience} from "@/components/Experiences/Experience";
 
 export function HomePage() {
   return (
@@ -13,6 +14,7 @@ export function HomePage() {
       <StarBackground />
       <MountainBackground />
       <Robot />
+        <Experience />
       <Projects />
       <Skills />
     </Container>

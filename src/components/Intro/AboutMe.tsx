@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button, Stack, Text, Title } from '@mantine/core';
+import { useViewportSize } from "@mantine/hooks";
+
 
 export const Typewriter = ({ text, speed }: { text: string; speed: number }) => {
   const [displayText, setDisplayText] = useState('');
@@ -21,6 +23,7 @@ export const Typewriter = ({ text, speed }: { text: string; speed: number }) => 
 };
 
 export const AboutMe = () => {
+  const { width } = useViewportSize();
   const handleOpenPdf = () => {
     window.open(
       'https://drive.google.com/file/d/1TnBkC0oWH6YGawiXq1XaJOkpkG3GSLjD/view?usp=sharing',
@@ -29,8 +32,8 @@ export const AboutMe = () => {
   };
   return (
     <Stack id="about-me" align="center" style={{ zIndex: 4, position: 'relative' }}>
-      <Stack h={900} pt={200} align="center" w="95%" maw={800}>
-        <Title order={1}>
+      <Stack h={width > 500 ? 900 : 700} pt={width > 500 ? 200 : 100} align="center" w="95%" maw={800}>
+        <Title ta='center' order={1}>
           <Typewriter text="Hello, I'm Hannah! Welcome to My Portfolio!" speed={100} />
         </Title>
         <Text size="md" ta="center" pb={10}>

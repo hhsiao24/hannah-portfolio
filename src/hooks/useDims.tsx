@@ -4,7 +4,7 @@ export const useDims = () => {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
 
-  const localRef = useRef<HTMLDivElement>(null);
+  const localRef = useRef<HTMLElement>(null);
 
   const getDims = () => {
     if (localRef.current) {

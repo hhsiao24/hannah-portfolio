@@ -1,5 +1,6 @@
 import React from 'react';
 import { Badge, Box, Button, Card, Grid, HoverCard, Image, List, Text, Title } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 
 export const Label = ({
   x,
@@ -29,24 +30,32 @@ export const Label = ({
   button2Link?: string;
 }) => {
   const isLeft = direction === 'left';
+  const { width } = useViewportSize();
 
   return (
     <Box
-      // p={0}
-      // w={375}
       style={{
         display: 'flex',
         position: 'absolute',
         top: `calc(50% - ${y}%)`,
         left: `calc(50% - ${x}%)`,
+        transform: `translateY(calc(-100% + ${width > 500 ? '100px' : '150px'})) ${isLeft ? 'translateX(-100%)' : ''}`,
         flexDirection: isLeft ? 'row-reverse' : 'row',
       }}
     >
-      <svg height={100} width={200} style={{ transform: isLeft ? 'scaleX(-1)' : undefined }}>
-        <circle cx={5} cy={95} r={5} fill="white" />
-        <line x1={5} y1={95} x2={100} y2={0} style={{ stroke: 'white', strokeWidth: 1 }} />
-        <line x1={100} y1={0} x2={200} y2={0} style={{ stroke: 'white', strokeWidth: 1 }} />
-      </svg>
+      {width > 500 ? (
+        <svg height={100} width={200} style={{ transform: isLeft ? 'scaleX(-1)' : undefined }}>
+          <circle cx={5} cy={95} r={5} fill="white" />
+          <line x1={5} y1={95} x2={100} y2={0} style={{ stroke: 'white', strokeWidth: 1 }} />
+          <line x1={100} y1={0} x2={200} y2={0} style={{ stroke: 'white', strokeWidth: 1 }} />
+        </svg>
+      ) : (
+        <svg height={50} width={80} style={{ transform: isLeft ? 'scaleX(-1)' : undefined }}>
+          <circle cx={5} cy={45} r={5} fill="white" />
+          <line x1={5} y1={45} x2={50} y2={0} style={{ stroke: 'white', strokeWidth: 1 }} />
+          <line x1={50} y1={0} x2={80} y2={0} style={{ stroke: 'white', strokeWidth: 1 }} />
+        </svg>
+      )}
 
       <HoverCard shadow="md" width={400} openDelay={200} closeDelay={200}>
         <HoverCard.Target>
@@ -67,36 +76,37 @@ export const Label = ({
             <Text size="lg" fw="bold">
               {title}
             </Text>
-
-            <div
-              style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.2)', margin: '0.5rem 0' }}
-            />
-
-            <Box
-              style={{
-                display: 'block',
-                marginTop: '0.5rem',
-                marginBottom: '0.5rem',
-              }}
-            >
-              <Title size="sm" fw="bold">
-                Technologies
-              </Title>
-            </Box>
-
-            <Box
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '0.5rem',
-              }}
-            >
-              {skills.map((skill, index) => (
-                <Badge key={index} variant="filled" style={{ backgroundColor: '#66a8d8' }}>
-                  {skill}
-                </Badge>
-              ))}
-            </Box>
+            {width > 500 && (
+              <>
+                <div
+                  style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.2)', margin: '0.5rem 0' }}
+                />
+                <Box
+                  style={{
+                    display: 'block',
+                    marginTop: '0.5rem',
+                    marginBottom: '0.5rem',
+                  }}
+                >
+                  <Title size="sm" fw="bold">
+                    Technologies
+                  </Title>
+                </Box>
+                <Box
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '0.5rem',
+                  }}
+                >
+                  {skills.map((skill, index) => (
+                    <Badge key={index} variant="filled" style={{ backgroundColor: '#66a8d8' }}>
+                      {skill}
+                    </Badge>
+                  ))}
+                </Box>
+              </>
+            )}
           </Card>
         </HoverCard.Target>
 

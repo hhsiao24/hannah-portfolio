@@ -2,9 +2,12 @@ import formFit from '/public/formfit.png';
 import breadboard from '/src/assets/breadboardBakery.jpg';
 import outline from '/src/assets/robotOutline.png';
 import { Container, Image, Stack, Text, Title } from '@mantine/core';
+import { useDims } from '@/hooks/useDims';
 import { Label } from './Label';
 
 export const Projects = () => {
+  const { ref, height, width } = useDims();
+
   return (
     <Container
       id="projects"
@@ -19,10 +22,10 @@ export const Projects = () => {
         hover for more information!
       </Text>
       <Stack justify="center" align="center" pb={100}>
-        <Container fluid p={0} style={{ position: 'absolute', height: '100%', width: '30%' }}>
+        <Container fluid p={0} style={{ position: 'absolute', height, width }}>
           <Label
-            x={1.5}
-            y={37}
+            x={0}
+            y={42}
             title="Breadboard Bakery 🍞"
             descriptionItems={[
               'A web application that enables users to upload images of their wired breadboards, generating' +
@@ -41,9 +44,8 @@ export const Projects = () => {
             button2Text="Learn More"
             button2Link="https://devpost.com/software/breadboard-bakery"
           />
-
           <Label
-            x={140}
+            x={15}
             y={25}
             title="Form Fit 🏋🏻‍♀️"
             descriptionItems={[
@@ -63,7 +65,7 @@ export const Projects = () => {
             button2Link="https://formfit.tech/"
           />
         </Container>
-        <Image src={outline} w="30%" />
+        <Image src={outline} w="30%" ref={ref} />
       </Stack>
     </Container>
   );

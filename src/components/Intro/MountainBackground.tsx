@@ -14,7 +14,7 @@ export const MountainBackground = () => {
 
   return (
     <Container
-      h={900}
+      h={width > 500 ? 900 : 700}
       p={0}
       m={0}
       style={{ position: 'absolute', width, maxWidth: width, zIndex: -1, top: 0 }}
