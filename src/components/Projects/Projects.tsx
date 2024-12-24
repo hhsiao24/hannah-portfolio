@@ -1,8 +1,8 @@
+import formFit from '/public/formfit.png';
 import breadboard from '/src/assets/breadboardBakery.jpg';
 import outline from '/src/assets/robotOutline.png';
-import { Container, Image, List, Stack, Text, Title } from '@mantine/core';
+import { Container, Image, Stack, Text, Title } from '@mantine/core';
 import { Label } from './Label';
-import formFit from '/public/formfit.png'
 
 export const Projects = () => {
   return (
@@ -50,7 +50,7 @@ export const Projects = () => {
               '2nd place in Sports Track, 3rd place in Health Track',
               'Web application delivering personalized exercise form feedback',
               'Employed MediaPipe and OpenCV to analyze user’s exercise videos, creating a downloadable video visualizer' +
-              ' that compares user’s exercise form to the “perfect” form',
+                ' that compares user’s exercise form to the “perfect” form',
               'Engineered an algorithm to interpret visualizer data, providing actionable feedback for user’s improvement',
             ]}
             skills={['MediaPipe', 'OpenCV', 'React', 'Python', 'HTML', 'CSS', 'Javascript']}

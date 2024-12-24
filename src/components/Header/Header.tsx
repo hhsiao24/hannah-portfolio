@@ -26,22 +26,23 @@ export const Header = () => {
         <Group justify="flex-end" align="center" h="100%">
           <a href="https://github.com/hhsiao24" target="_blank" rel="noopener noreferrer">
             <ActionIcon variant="subtle" aria-label="Settings">
-              <IconBrandGithub style={{width: '70%', height: '70%'}} stroke={1.5}/>
+              <IconBrandGithub style={{ width: '70%', height: '70%' }} stroke={1.5} />
             </ActionIcon>
           </a>
-          <a href='https://www.linkedin.com/in/hannah-hsiao-784845132/' target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/hannah-hsiao-784845132/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <ActionIcon variant="subtle" aria-label="Settings">
-              <IconBrandLinkedin
-                  style={{width: '70%', height: '70%'}}
-                  stroke={1.5}
-              />
+              <IconBrandLinkedin style={{ width: '70%', height: '70%' }} stroke={1.5} />
             </ActionIcon>
           </a>
-            <ActionIcon variant="subtle" aria-label="Settings" onClick={handleEmailClick}>
-              <IconMail style={{width: '70%', height: '70%'}} stroke={1.5}/>
-            </ActionIcon>
+          <ActionIcon variant="subtle" aria-label="Settings" onClick={handleEmailClick}>
+            <IconMail style={{ width: '70%', height: '70%' }} stroke={1.5} />
+          </ActionIcon>
         </Group>
       </Grid.Col>
     </Grid>
-);
+  );
 };

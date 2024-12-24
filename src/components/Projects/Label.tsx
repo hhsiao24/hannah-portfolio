@@ -32,8 +32,8 @@ export const Label = ({
 
   return (
     <Box
-        // p={0}
-        // w={375}
+      // p={0}
+      // w={375}
       style={{
         display: 'flex',
         position: 'absolute',
@@ -156,13 +156,25 @@ export const Label = ({
 
             <Grid p={2} mt={10}>
               <Grid.Col span={6}>
-                <Button variant="outline" component="a" href={button1Link} target="_blank" fullWidth>
+                <Button
+                  variant="outline"
+                  component="a"
+                  href={button1Link}
+                  target="_blank"
+                  fullWidth
+                >
                   {button1Text}
                 </Button>
               </Grid.Col>
               {buttons === 2 && (
                 <Grid.Col span={6}>
-                  <Button variant="outline" component="a" href={button2Link} target="_blank" fullWidth>
+                  <Button
+                    variant="outline"
+                    component="a"
+                    href={button2Link}
+                    target="_blank"
+                    fullWidth
+                  >
                     {button2Text}
                   </Button>
                 </Grid.Col>
