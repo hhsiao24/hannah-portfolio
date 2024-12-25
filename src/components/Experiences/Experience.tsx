@@ -31,7 +31,7 @@ export const Experience = () => {
             <ExperienceFrame
               title="Georgia Tech"
               img={gt}
-              position="CS 1331 Undergraduate TA"
+              position="Intro to Object-Oriented Programming Teaching Assistant"
               dates="January 2024 — present"
               descriptionItems={[
                 'Lead weekly recitations with 30 students to review and expand on the course curriculum',
