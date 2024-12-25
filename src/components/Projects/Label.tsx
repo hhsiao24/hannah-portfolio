@@ -39,7 +39,7 @@ export const Label = ({
         position: 'absolute',
         top: `calc(50% - ${y}%)`,
         left: `calc(50% - ${x}%)`,
-        transform: `translateY(calc(-100% + ${width > 500 ? '100px' : '150px'})) ${isLeft ? 'translateX(-100%)' : ''}`,
+        transform: `translateY(${width > 500 ? '-100px' : '-50px'}) ${isLeft ? 'translateX(-100%)' : ''}`,
         flexDirection: isLeft ? 'row-reverse' : 'row',
       }}
     >

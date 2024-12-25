@@ -2,11 +2,11 @@ import formFit from '/src/assets/formfit.png';
 import breadboard from '/src/assets/breadboardBakery.jpg';
 import outline from '/src/assets/robotOutline.png';
 import { Container, Image, Stack, Text, Title } from '@mantine/core';
-import { useDims } from '@/hooks/useDims';
 import { Label } from './Label';
+import {useElementSize} from "@mantine/hooks";
 
 export const Projects = () => {
-  const { ref, height, width } = useDims<HTMLImageElement>();
+  const { ref, height, width } = useElementSize();
 
   return (
     <Container
