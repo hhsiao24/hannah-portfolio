@@ -10,7 +10,7 @@ import { Skills } from '@/components/Skills/Skills';
 
 export function HomePage() {
   return (
-    <Container fluid m={0} p={0}>
+    <Container fluid m={0} p={0} style={{ overflowX: "clip" }} >
       <AboutMe />
       <StarBackground />
       <MountainBackground />

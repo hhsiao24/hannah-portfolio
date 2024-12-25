@@ -7,6 +7,12 @@ export const Header = () => {
   const handleEmailClick = () => {
     window.location.href = 'mailto:hhsiao24@gmail.com?';
   };
+
+  const scrollWithOffset = (offset: number) => (el: HTMLElement) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: yCoordinate + offset, behavior: 'smooth' });
+  };
+
   const [width, _] = useWindowSize();
   return (
     <Grid px={15} py={8}>
@@ -20,11 +26,21 @@ export const Header = () => {
               <Button component={HashLink} variant="subtle" to="/#about-me" smooth>
                 About me
               </Button>
-                <Button component={HashLink} variant="subtle" to="/#experiences" smooth>Experiences</Button>
+              <Button
+                component={HashLink}
+                variant="subtle"
+                to="/#experiences"
+                smooth
+                scroll={scrollWithOffset(-50)}
+              >
+                Experiences
+              </Button>
               <Button component={HashLink} variant="subtle" to="/#projects" smooth>
                 Projects
               </Button>
-              <Button component={HashLink} variant="subtle" to="/#skills" smooth>Skills</Button>
+              <Button component={HashLink} variant="subtle" to="/#skills" smooth>
+                Skills
+              </Button>
             </Group>
           </Grid.Col>
           <Grid.Col span={3}>
@@ -52,41 +68,59 @@ export const Header = () => {
       ) : (
         <>
           <Grid.Col span={9}>
-              <Group justify="end" align="center" h="100%">
-                  <a href="https://github.com/hhsiao24" target="_blank" rel="noopener noreferrer">
-                      <ActionIcon variant="subtle" aria-label="Settings">
-                          <IconBrandGithub style={{width: '70%', height: '70%'}} stroke={1.5}/>
-                      </ActionIcon>
-                  </a>
-                  <a
-                      href="https://www.linkedin.com/in/hannah-hsiao-784845132/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                  >
-                      <ActionIcon variant="subtle" aria-label="Settings">
-                          <IconBrandLinkedin style={{width: '70%', height: '70%'}} stroke={1.5}/>
-                      </ActionIcon>
-                  </a>
-                  <ActionIcon variant="subtle" aria-label="Settings" onClick={handleEmailClick}>
-                      <IconMail style={{width: '70%', height: '70%'}} stroke={1.5}/>
+            <Group justify="end" align="center" h="100%">
+              <a href="https://github.com/hhsiao24" target="_blank" rel="noopener noreferrer">
+                <ActionIcon variant="subtle" aria-label="Settings">
+                  <IconBrandGithub style={{ width: '70%', height: '70%' }} stroke={1.5} />
+                </ActionIcon>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/hannah-hsiao-784845132/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ActionIcon variant="subtle" aria-label="Settings">
+                  <IconBrandLinkedin style={{ width: '70%', height: '70%' }} stroke={1.5} />
+                </ActionIcon>
+              </a>
+              <ActionIcon variant="subtle" aria-label="Settings" onClick={handleEmailClick}>
+                <IconMail style={{ width: '70%', height: '70%' }} stroke={1.5} />
+              </ActionIcon>
+              <Menu>
+                <Menu.Target>
+                  <ActionIcon variant="subtle">
+                    <IconMenu2 />
                   </ActionIcon>
-                  <Menu>
-                      <Menu.Target>
-                          <ActionIcon variant="subtle">
-                              <IconMenu2/>
-                          </ActionIcon>
-                      </Menu.Target>
-                      <Menu.Dropdown>
-                          <Menu.Item component={HashLink} to="/#about-me">About Me</Menu.Item>
-                          <Menu.Divider/>
-                          <Menu.Item component={HashLink} to="/#experiences">Experiences</Menu.Item>
-                          <Menu.Divider/>
-                          <Menu.Item component={HashLink} to="/#projects">Projects</Menu.Item>
-                          <Menu.Divider/>
-                          <Menu.Item component={HashLink} to="/#skills">Skills</Menu.Item>
-                      </Menu.Dropdown>
-                  </Menu>
-              </Group>
+                </Menu.Target>
+                <Menu.Dropdown>
+                  <Menu.Item component={HashLink} to="/#about-me" smooth>
+                    About Me
+                  </Menu.Item>
+                  <Menu.Divider />
+                  <Menu.Item
+                    component={HashLink}
+                    to="/#experiences"
+                    smooth
+                    scroll={scrollWithOffset(-80)}
+                  >
+                    Experiences
+                  </Menu.Item>
+                  <Menu.Divider />
+                  <Menu.Item component={HashLink} to="/#projects" smooth>
+                    Projects
+                  </Menu.Item>
+                  <Menu.Divider />
+                  <Menu.Item
+                    component={HashLink}
+                    to="/#skills"
+                    smooth
+                    scroll={scrollWithOffset(-80)}
+                  >
+                    Skills
+                  </Menu.Item>
+                </Menu.Dropdown>
+              </Menu>
+            </Group>
           </Grid.Col>
         </>
       )}

@@ -63,7 +63,7 @@ export const Label = ({
         <HoverCard.Target>
           <Card
             shadow="sm"
-            padding={width > 500 ? "lg" : "xs"}
+            padding={width > 500 ? 'lg' : 'xs'}
             radius="md"
             w={width > 500 ? 300 : 50}
             withBorder
@@ -78,7 +78,7 @@ export const Label = ({
             <Text
               size="lg"
               fw="bold"
-              h='100%'
+              h="100%"
               style={{
                 display: width > 500 ? '' : 'flex',
                 justifyContent: width > 500 ? '' : 'center',
@@ -127,7 +127,7 @@ export const Label = ({
           </Card>
         </HoverCard.Target>
 
-        <HoverCard.Dropdown>
+        <HoverCard.Dropdown maw={width - 20} p={0} bg="transparent">
           <Card
             shadow="sm"
             padding="lg"
