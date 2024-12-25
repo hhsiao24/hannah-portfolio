@@ -6,6 +6,7 @@ export const Label = ({
   x,
   y,
   title,
+  emoji,
   descriptionItems,
   skills,
   img,
@@ -19,6 +20,7 @@ export const Label = ({
   x: number;
   y: number;
   title: string;
+  emoji: string;
   descriptionItems: string[];
   skills: string[];
   img: string;
@@ -61,9 +63,9 @@ export const Label = ({
         <HoverCard.Target>
           <Card
             shadow="sm"
-            padding="lg"
+            padding={width > 500 ? "lg" : "xs"}
             radius="md"
-            w={300}
+            w={width > 500 ? 300 : 50}
             withBorder
             style={{
               backgroundColor: 'rgba(18, 17, 38, 0.5)',
@@ -73,8 +75,23 @@ export const Label = ({
               width: 300,
             }}
           >
-            <Text size="lg" fw="bold">
-              {title}
+            <Text
+              size="lg"
+              fw="bold"
+              h='100%'
+              style={{
+                display: width > 500 ? '' : 'flex',
+                justifyContent: width > 500 ? '' : 'center',
+                alignItems: width > 500 ? '' : 'center',
+              }}
+            >
+              {width > 500 ? (
+                <>
+                  {title} {emoji}
+                </>
+              ) : (
+                emoji
+              )}
             </Text>
             {width > 500 && (
               <>

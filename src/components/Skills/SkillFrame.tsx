@@ -9,7 +9,9 @@ export const SkillFrame = ({ skill, img }: { skill: string; img: string }) => {
           <Box>
             <Image src={img} h={35} />
           </Box>
-          <Text ta="center">{skill}</Text>
+          <Text ta="left" style={{ flex: 1 }}>
+            {skill}
+          </Text>
         </Group>
       </Card>
     </Grid.Col>

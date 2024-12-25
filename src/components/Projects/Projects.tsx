@@ -26,7 +26,8 @@ export const Projects = () => {
           <Label
             x={0}
             y={42}
-            title="Breadboard Bakery 🍞"
+            title="Breadboard Bakery"
+            emoji="🍞"
             descriptionItems={[
               'A web application that enables users to upload images of their wired breadboards, generating' +
                 ' corresponding logic circuit schematics using advanced image processing techniques',
@@ -47,7 +48,8 @@ export const Projects = () => {
           <Label
             x={15}
             y={25}
-            title="Form Fit 🏋🏻‍♀️"
+            title="Form Fit"
+            emoji="🏋🏻‍"
             descriptionItems={[
               '2nd place in Sports Track, 3rd place in Health Track',
               'Web application delivering personalized exercise form feedback',
