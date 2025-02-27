@@ -23,7 +23,7 @@ export const Experience = () => {
             <ExperienceFrame
               title="Ford Motor Company"
               img={ford}
-              position="Enterprise Technology Software Engineering Intern"
+              position="Software Engineering Intern"
               dates="May 2025 — August 2025"
             />
           </Timeline.Item>
