@@ -19,14 +19,14 @@ export const Experience = () => {
       </Title>
       <Center>
         <Timeline bulletSize={24} active={3} reverseActive>
-          {/*<Timeline.Item bullet={<IconPower />} lineVariant="dashed">*/}
-          {/*  <ExperienceFrame*/}
-          {/*    title="Ford Motor Company"*/}
-          {/*    img={ford}*/}
-          {/*    position="Software Engineering Intern"*/}
-          {/*    dates="May 2025 — August 2025"*/}
-          {/*  />*/}
-          {/*</Timeline.Item>*/}
+          <Timeline.Item bullet={<IconPower />} lineVariant="dashed">
+            <ExperienceFrame
+              title="Ford Motor Company"
+              img={ford}
+              position="Software Engineering Intern"
+              dates="May 2025 — August 2025"
+            />
+          </Timeline.Item>
           <Timeline.Item bullet={<IconPower />}>
             <ExperienceFrame
               title="Georgia Tech"
