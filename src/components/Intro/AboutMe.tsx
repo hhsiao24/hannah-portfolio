@@ -26,7 +26,7 @@ export const AboutMe = () => {
   const { width } = useViewportSize();
   const handleOpenPdf = () => {
     window.open(
-      'https://drive.google.com/file/d/1YVCWW4TGGlH3ZZ3j02tHVlGNbLiZlY1U/view?usp=sharing',
+      'https://drive.google.com/file/d/1x6Fw0nehjJ_-vuUeVZm4hHEjNm7WhMT_/view?usp=sharing',
       '_blank'
     );
   };
