@@ -1,4 +1,5 @@
 import formFit from '/src/assets/formfit.png';
+import docmcquery from '/src/assets/docmcquery.png';
 import breadboard from '/src/assets/breadboardBakery.jpg';
 import outline from '/src/assets/robotOutline.png';
 import { Container, Image, Stack, Text, Title } from '@mantine/core';
@@ -66,6 +67,28 @@ export const Projects = () => {
             button2Text="Link"
             button2Link="https://formfit.tech/"
           />
+            <Label
+                x={0}
+                y={-10}
+                title="Doc McQuery"
+                emoji="🦛‍"
+                descriptionItems={[
+                    '2nd place in Health Track',
+                    'Web application helping health professionals access relevant case studies and related patient cases',
+                    'Processed and embedded patient data into a vector database to support semantic retrieval and similarity search',
+                    'Integrated the OpenAI API to translate natural language queries into optimized database calls and generate context-' +
+                    'aware medical summaries',
+                    'Built a full-stack React and Flask web app with real-time filtering, interactive result displays, and case comparison',
+                ]}
+                skills={['OpenAI', 'React', 'Python', 'PostgreSQL']}
+                img={docmcquery}
+                direction="right"
+                buttons={2}
+                button1Text="Repository"
+                button1Link="https://github.com/hhsiao24/Doc-McQuery"
+                button2Text="Link"
+                button2Link="https://devpost.com/software/dr-mcquery"
+            />
         </Container>
         <Image src={outline} w="30%" ref={ref} />
       </Stack>

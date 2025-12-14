@@ -18,21 +18,41 @@ export const Experience = () => {
         Experiences
       </Title>
       <Center>
-        <Timeline bulletSize={24} active={3} reverseActive>
+        <Timeline bulletSize={24} active={4} reverseActive>
+            <Timeline.Item bullet={<IconPower />} lineVariant="dashed">
+                <ExperienceFrame
+                    title="Georgia Tech"
+                    img={gt}
+                    position="Teaching Assistant: Design and Analysis of Algorithms"
+                    dates="August 2025 — present"
+                    descriptionItems={[
+                        'Host weekly office hours to provide 600+ students with individualized support and instruction from lecture material\n' +
+                        'including graph algorithms, dynamic programming, divide and conquer, and complexity theory; develop original algorithm design problems',
+                    ]}
+                />
+            </Timeline.Item>
           <Timeline.Item bullet={<IconPower />} lineVariant="dashed">
             <ExperienceFrame
               title="Ford Motor Company"
               img={ford}
               position="Software Engineering Intern"
               dates="May 2025 — August 2025"
+              descriptionItems={[
+                  'Spearheaded the adoption of Playwright for end-to-end testing across three fleet management teams, integrating\n' +
+                  'tests into the CI/CD pipeline and boosting release efficiency by 40% while ensuring application reliability',
+                  'Developed a scalable React front-end that enables fleet managers to request vehicle titles, renew registrations, and\n' +
+                  'track progress in real time, reducing customer task completion time by 80% and enhancing user experience',
+                  'Integrated REST APIs into a Spring Boot backend, enabling secure data synchronization for fleet management and\n' +
+                  'automated title request tracking, which improved transparency and reduced manual follow-ups',
+              ]}
             />
           </Timeline.Item>
           <Timeline.Item bullet={<IconPower />}>
             <ExperienceFrame
               title="Georgia Tech"
               img={gt}
-              position="Intro to Object-Oriented Programming Teaching Assistant"
-              dates="January 2024 — present"
+              position="Teaching Assistant: Intro to Object-Oriented Programming, Forum Lead"
+              dates="January 2024 — May 2025"
               descriptionItems={[
                 'Lead weekly recitations with 30 students to review and expand on the course curriculum',
                 'Host weekly office hours to provide students with individualized support and instruction from lecture material',
