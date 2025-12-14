@@ -31,7 +31,7 @@ export const Experience = () => {
                     ]}
                 />
             </Timeline.Item>
-          <Timeline.Item bullet={<IconPower />} lineVariant="dashed">
+          <Timeline.Item bullet={<IconPower />}>
             <ExperienceFrame
               title="Ford Motor Company"
               img={ford}
