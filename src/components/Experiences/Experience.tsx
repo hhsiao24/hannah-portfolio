@@ -4,6 +4,7 @@ import gt from '/src/assets/gtlogo.png';
 import rail from '/src/assets/raillogo.png';
 import mate from '/src/assets/roboticslogo.png';
 import solar from '/src/assets/solar.png';
+import ibm from '/src/assets/ibm.png';
 import { Center, Container, Timeline, Title } from '@mantine/core';
 import { ExperienceFrame } from '@/components/Experiences/ExperienceFrame';
 
@@ -18,7 +19,7 @@ export const Experience = () => {
         Experiences
       </Title>
       <Center>
-        <Timeline bulletSize={24} active={4} reverseActive>
+        <Timeline bulletSize={24} active={6} reverseActive>
           <Timeline.Item bullet={<IconPower />} lineVariant="dashed">
             <ExperienceFrame
               title="Georgia Tech"
@@ -34,7 +35,7 @@ export const Experience = () => {
           <Timeline.Item bullet={<IconPower />}>
             <ExperienceFrame
               title="IBM"
-              img={gt}
+              img={ibm}
               position="Software Engineering Intern"
               dates="May 2026 — August 2026"
               descriptionItems={[

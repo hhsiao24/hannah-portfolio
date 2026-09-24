@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import { Button, Stack, Text, Title } from '@mantine/core';
 import { useViewportSize } from "@mantine/hooks";
 
-import resumePdf from '/src/assets/hannah-hsiao-resume.pdf';
-
 
 export const Typewriter = ({ text, speed }: { text: string; speed: number }) => {
   const [displayText, setDisplayText] = useState('');
@@ -39,7 +37,7 @@ export const AboutMe = () => {
           brainstorming new ideas 💡, I’m all about building things that help people and make life
           better.
         </Text>
-        <Button component="a" href={resumePdf}>Resume</Button>
+        <Button component="a" href="/hannah-hsiao-resume.pdf" target='_blank'>Resume</Button>
       </Stack>
     </Stack>
   );
