@@ -19,18 +19,42 @@ export const Experience = () => {
       </Title>
       <Center>
         <Timeline bulletSize={24} active={4} reverseActive>
-            <Timeline.Item bullet={<IconPower />} lineVariant="dashed">
-                <ExperienceFrame
-                    title="Georgia Tech"
-                    img={gt}
-                    position="Teaching Assistant: Design and Analysis of Algorithms"
-                    dates="August 2025 — present"
-                    descriptionItems={[
-                        'Host weekly office hours to provide 600+ students with individualized support and instruction from lecture material\n' +
-                        'including graph algorithms, dynamic programming, divide and conquer, and complexity theory; develop original algorithm design problems',
-                    ]}
-                />
-            </Timeline.Item>
+          <Timeline.Item bullet={<IconPower />} lineVariant="dashed">
+            <ExperienceFrame
+              title="Georgia Tech"
+              img={gt}
+              position="Graduate Teaching Assistant: Design and Analysis of Algorithms"
+              dates="August 2026 — present"
+              descriptionItems={[
+                'Host weekly office hours to provide 600+ students with individualized support and instruction from lecture material\n' +
+                'including graph algorithms, dynamic programming, divide and conquer, and complexity theory; develop original algorithm design problems',
+              ]}
+            />
+          </Timeline.Item>
+          <Timeline.Item bullet={<IconPower />}>
+            <ExperienceFrame
+              title="IBM"
+              img={gt}
+              position="Software Engineering Intern"
+              dates="May 2026 — August 2026"
+              descriptionItems={[
+                'Engineered an AI-assisted debugging workflow and MCP-based self-service tools that reduced environment troubleshooting cycles by 98%, enabling engineers to diagnose configuration issues without asynchronous support',
+                'Optimized an infrastructure routing algorithm that automated a previously manual server configuration workflow using server utilization and queue depth to dynamically redirect workloads and prevent system overload',
+              ]}
+            />
+          </Timeline.Item>
+          <Timeline.Item bullet={<IconPower />}>
+            <ExperienceFrame
+              title="Georgia Tech"
+              img={gt}
+              position="Teaching Assistant: Design and Analysis of Algorithms"
+              dates="August 2025 — May 2026"
+              descriptionItems={[
+                'Host weekly office hours to provide 600+ students with individualized support and instruction from lecture material\n' +
+                  'including graph algorithms, dynamic programming, divide and conquer, and complexity theory; develop original algorithm design problems',
+              ]}
+            />
+          </Timeline.Item>
           <Timeline.Item bullet={<IconPower />}>
             <ExperienceFrame
               title="Ford Motor Company"
@@ -38,11 +62,11 @@ export const Experience = () => {
               position="Software Engineering Intern"
               dates="May 2025 — August 2025"
               descriptionItems={[
-                  'Spearheaded the adoption of Playwright for end-to-end testing across three fleet management teams, integrating\n' +
+                'Spearheaded the adoption of Playwright for end-to-end testing across three fleet management teams, integrating\n' +
                   'tests into the CI/CD pipeline and boosting release efficiency by 40% while ensuring application reliability',
-                  'Developed a scalable React front-end that enables fleet managers to request vehicle titles, renew registrations, and\n' +
+                'Developed a scalable React front-end that enables fleet managers to request vehicle titles, renew registrations, and\n' +
                   'track progress in real time, reducing customer task completion time by 80% and enhancing user experience',
-                  'Integrated REST APIs into a Spring Boot backend, enabling secure data synchronization for fleet management and\n' +
+                'Integrated REST APIs into a Spring Boot backend, enabling secure data synchronization for fleet management and\n' +
                   'automated title request tracking, which improved transparency and reduced manual follow-ups',
               ]}
             />
