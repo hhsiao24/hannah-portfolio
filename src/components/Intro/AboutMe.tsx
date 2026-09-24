@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Button, Stack, Text, Title } from '@mantine/core';
 import { useViewportSize } from "@mantine/hooks";
 
+import resumePdf from '/src/assets/hannah-hsiao-resume.pdf';
+
 
 export const Typewriter = ({ text, speed }: { text: string; speed: number }) => {
   const [displayText, setDisplayText] = useState('');
@@ -24,12 +26,6 @@ export const Typewriter = ({ text, speed }: { text: string; speed: number }) => 
 
 export const AboutMe = () => {
   const { width } = useViewportSize();
-  const handleOpenPdf = () => {
-    window.open(
-      'https://drive.google.com/file/d/1CRUggL6DZDrIIH8-rIr-o0mdAme0Juu8/view?usp=sharing',
-      '_blank'
-    );
-  };
   return (
     <Stack id="about-me" align="center" style={{ zIndex: 4, position: 'relative' }}>
       <Stack h={width > 500 ? 900 : 700} pt={width > 500 ? 200 : 100} align="center" w="95%" maw={800}>
@@ -43,7 +39,7 @@ export const AboutMe = () => {
           brainstorming new ideas 💡, I’m all about building things that help people and make life
           better.
         </Text>
-        <Button onClick={handleOpenPdf}>Resume</Button>
+        <Button component="a" href={resumePdf}>Resume</Button>
       </Stack>
     </Stack>
   );
