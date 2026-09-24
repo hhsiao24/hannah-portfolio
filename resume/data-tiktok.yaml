@@ -1,0 +1,85 @@
+contacts:
+- text: "Atlanta, GA"
+- text: "hhsiao24@gmail.com"
+  link: "mailto:hhsiao24@gmail.com"
+- text: "hhsiao24.github.io/hannah-portfolio"
+  link: "https://hhsiao24.github.io/hannah-portfolio/"
+
+education:
+- Data Structures and Algorithms
+- Linear Algebra
+- OOP
+- Computer Organization
+- Systems and Networks
+- Artificial Intelligence
+- Machine Learning
+- Natural Language Processing
+- Computer Vision
+
+experience:
+- position: "Software Engineering Intern"
+  tools: ""
+  institution: "IBM, Electronic Design Automation (EDA)"
+  location: "Austin, TX"
+  date: "May 2026 – August 2026"
+  description:
+  - Engineered an AI-assisted debugging workflow and MCP-based self-service tools that reduced environment troubleshooting cycles by 98%, enabling engineers to diagnose configuration issues without asynchronous support
+  - Optimized an infrastructure routing algorithm that automated a previously manual server configuration workflow using server utilization and queue depth to dynamically redirect workloads and prevent system overload
+  
+- position: "Graduate Teaching Assistant"
+  tools: ""
+  institution: "CS 3510: Design & Analysis of Algorithms, Georgia Institute of Technology"
+  location: "Atlanta, GA"
+  date: "August 2025 — present"
+  description:
+  - Provide algorithm design and problem-solving support to 600+ students through office hours, covering graphs, dynamic programming, divide and conquer, and complexity analysis; develop original algorithm design problems
+
+- position: "Software Engineering Intern"
+  tools: ""
+  institution: "Ford Motor Company, Fleet Management Team"
+  location: "Dearborn, MI"
+  date: "May 2025 – August 2025"
+  description:
+  - Spearheaded adoption of **Playwright** for end-to-end testing across three fleet management teams, integrating automated tests into the CI/CD pipeline and improving release efficiency by 40% while maintaining reliability
+  - Developed a scalable **React** front-end enabling fleet managers to request vehicle titles, renew registrations, and track progress in real time, reducing customer task completion time by 80%
+  - Integrated **REST APIs** into a **Spring Boot** backend to enable secure data synchronization and automated title request tracking, improving workflow transparency and reducing manual follow-ups
+
+- position: "Undergraduate Teaching Assistant, Forum Lead"
+  tools: ""
+  institution: "CS 1331: Object-Oriented Programming in Java, Georgia Institute of Technology"
+  location: "Atlanta, GA"
+  date: "January 2024 — May 2025"
+  description:
+  - Led weekly recitations for 30 students and managed technical support for a course of 800+ students, explaining Java and object-oriented programming concepts including inheritance, polymorphism, recursion, and software design
+
+- position: "Undergraduate Researcher"
+  tools: ""
+  institution: "RAIL Lab, Georgia Institute of Technology"
+  location: "Atlanta, GA"
+  date: "August 2024 — May 2026"
+  description:
+  - Designed and executed experiments to benchmark autonomous robotic grasping pipelines on the Hello Robot Stretch RE 2 platform, comparing geometry-driven computer vision heuristics with end-to-end imitation-learning models
+  - Developed a **ROS**-based evaluation pipeline to collect precise gripper accuracy measurements across manipulation trials and quantitatively compare model performance
+  - Analyzed algorithmic and sensor-level failure modes in point cloud segmentation and depth estimation, identifying limitations caused by partial observability and surface specularity; documented findings in an undergraduate thesis
+
+projects:
+- title: "Doc McQuery"
+  caption: "Georgia Tech HackGT, 2nd place in Healthcare Track"
+  tools: "Python, PostgreSQL, pgvector, Sentence Transformers, REST API, OpenAI API"
+  description:
+  - Competed against over 200 teams to build a **RAG-based semantic search system** for medical case reports using **Sentence Transformers** to generate embeddings and **pgvector** for vector similarity retrieval
+  - Designed retrieval and prompt workflows that transformed natural language queries into relevant document context and generated context-aware medical summaries using the **OpenAI API**
+  - Built a full-stack **React** and **Flask** web application with interactive search results and side-by-side case comparison
+
+- title: "Breadboard Analyzer"
+  caption: ""
+  tools: "Python, OpenCV, React, Flask"
+  description:
+  - Developed a web application using **React** that converts uploaded breadboard images into corresponding logic circuit schematics using classical computer vision techniques
+  - Implemented an **OpenCV** image-processing pipeline using grayscale conversion, edge detection, and contour analysis to identify wires and integrated circuits for schematic generation
+
+skills:
+- category: "Tools"
+  content: "Git, Linux, Docker, OpenCV, CMake, Flask API, CI/CD, ROS, PostgreSQL, Unity, Figma"
+- category: "Languages/Frameworks"
+  content: "Python, C/C++, Java, JavaScript, PyTorch, NumPy, React.js, Spring Boot, HTML, CSS, C#"
