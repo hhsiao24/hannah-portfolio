@@ -37,7 +37,7 @@ export const AboutMe = () => {
           brainstorming new ideas 💡, I’m all about building things that help people and make life
           better.
         </Text>
-        <Button component="a" href="/hannah-hsiao-resume.pdf" target='_blank'>Resume</Button>
+        <Button component="a" href={`${import.meta.env.BASE_URL}/hannah-hsiao-resume.pdf`} target='_blank'>Resume</Button>
       </Stack>
     </Stack>
   );
