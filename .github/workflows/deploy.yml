@@ -39,7 +39,7 @@ jobs:
 
       - name: Compile resume
         run: |
-          typst compile resume/main-masters.typ src/assets/hannah-hsiao-resume.pdf
+          typst compile resume/main-masters.typ public/hannah-hsiao-resume.pdf
 
       - name: Set up Node
         uses: actions/setup-node@v4
